@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *"); // running as crome app
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!isset($_POST['email']) || !isset($_POST['password'])) {
-        $response = array('status' => 'failed', 'message' => 'Bad Request');
+        $response = array('failed' => 'false', 'message' => 'Bad Request');
         sendJsonResponse($response);
         exit();
     }
@@ -18,15 +18,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         while ($row = $result->fetch_assoc()) {
             $userdata[] = $row;
         }
-        $response = array('status' => 'success', 'message' => 'Login successful', 'data' => $userdata);
+        $response = array('success' => 'true', 'message' => 'Login successful', 'data' => $userdata);
         sendJsonResponse($response);
     } else {
-        $response = array('status' => 'failed', 'message' => 'Invalid email or password','data'=>null);
+        $response = array('failed' => 'false', 'message' => 'Invalid email or password','data'=>null);
         sendJsonResponse($response);
     }
 
 }else{
-    $response = array('status' => 'failed', 'message' => 'Method Not Allowed');
+    $response = array('failed' => 'false', 'message' => 'Method Not Allowed');
     sendJsonResponse($response);
     exit();
 }
