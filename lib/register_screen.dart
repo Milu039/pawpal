@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:pawpal/login_screen.dart';
@@ -214,7 +213,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           if (response.statusCode == 200) {
             var jsonResponse = response.body;
             var resarray = jsonDecode(jsonResponse);
-            log(jsonResponse);
+            print(jsonResponse);
             if (resarray['status'] == 'success') {
               if (!mounted) return;
               SnackBar snackBar = const SnackBar(
