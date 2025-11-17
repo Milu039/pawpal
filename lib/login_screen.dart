@@ -208,7 +208,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   backgroundColor: Colors.green,
                 ),
               );
-              Navigator.pop(context);
               // Navigate to home page or dashboard
               Navigator.pushReplacement(
                 context,
