@@ -214,7 +214,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           if (response.statusCode == 200) {
             var jsonResponse = response.body;
             var resarray = jsonDecode(jsonResponse);
-            log(jsonResponse);
+            print(jsonResponse);
             if (resarray['status'] == 'success') {
               if (!mounted) return;
               SnackBar snackBar = const SnackBar(

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -195,10 +196,10 @@ class _LoginScreenState extends State<LoginScreen> {
         .then((response) {
           if (response.statusCode == 200) {
             var jsonResponse = response.body;
-            // print(jsonResponse);
             var resarray = jsonDecode(jsonResponse);
+            print(jsonResponse);
             if (resarray['status'] == 'success') {
-              //print(resarray['data'][0]);
+              print(resarray['data'][0]);
               user = User.fromJson(resarray['data'][0]);
 
               if (!mounted) return;
