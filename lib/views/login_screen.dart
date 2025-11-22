@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:pawpal/myconfig.dart';
@@ -40,7 +39,6 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             children: [
               Padding(padding: const EdgeInsets.all(24.0),
-              child: Image.asset('assets/images/icon.png',scale: 4.5,),
               ),
               SizedBox(height: 80),
               TextFormField(
