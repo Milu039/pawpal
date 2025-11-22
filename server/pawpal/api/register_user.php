@@ -18,7 +18,6 @@
 	$phone = $_POST['phone'];
 	$password = $_POST['password'];
 	$hashedpassword = sha1($password);
-	$otp = rand(100000, 999999);
 	// Check if email already exists
 	$sqlcheckmail = "SELECT * FROM `tbl_users` WHERE `email` = '$email'";
 	$result = $conn->query($sqlcheckmail);
