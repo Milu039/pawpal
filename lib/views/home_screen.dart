@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pawpal/login_screen.dart';
+import 'package:pawpal/views/login_screen.dart';
 import 'package:pawpal/models/user.dart';
 
 class HomeScreen extends StatefulWidget {
