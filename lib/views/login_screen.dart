@@ -39,6 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             children: [
               Padding(padding: const EdgeInsets.all(24.0),
+              child: Text("PawPal", style: TextStyle(fontSize:48),),
               ),
               SizedBox(height: 80),
               TextFormField(
